@@ -4,7 +4,7 @@ import { svg } from 'assets';
 
 const Card = ({ index, name, text }) => {
   return (
-    <div className="bg-[#ffffff] p-4 px-7 rounded-lg">
+    <div className="bg-white shadow-xl p-4 px-7 rounded-lg">
       <div className="font-bold">
         <b className="text-[#6379F4]">{index}.</b> {name}
       </div>

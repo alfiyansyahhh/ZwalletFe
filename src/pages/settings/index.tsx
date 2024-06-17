@@ -1,7 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const Component: React.FC = () => {
-  return <h1>Home Page...asdasd</h1>;
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
 
 export default Component;

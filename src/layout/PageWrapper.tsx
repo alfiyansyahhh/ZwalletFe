@@ -1,22 +1,22 @@
-import { ReactNode, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { setAppState } from 'stores/actions/appState'
+import { ReactNode, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setAppState } from 'stores/actions/appState';
 
 type Props = {
-  state?: string
-  children: ReactNode
-}
+  state?: string;
+  children: ReactNode;
+};
 
 const PageWrapper = (props: Props) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (props.state) {
-      dispatch(setAppState(props.state))
+      dispatch(setAppState(props.state));
     }
-  }, [dispatch, props])
+  }, [dispatch, props]);
 
-  return <>{props.children}</>
-}
+  return <>{props.children}</>;
+};
 
-export default PageWrapper
+export default PageWrapper;

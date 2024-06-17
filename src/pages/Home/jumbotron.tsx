@@ -14,6 +14,7 @@ const Component: React.FC = () => {
           backgroundImage: `url(${svg.bg})`,
           backgroundSize: 'cover',
           height: '800px',
+          backgroundAttachment: 'fixed',
           '@media (max-width: 1300px)': {
             height: '600px',
           },

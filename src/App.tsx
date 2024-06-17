@@ -9,6 +9,9 @@ import Login from 'pages/Auth/Login';
 import ForgotPassword from 'pages/Auth/resetPassword';
 import CreatePin from 'pages/Auth/createPin';
 import CreateNewPassword from 'pages/Auth/createNewPassword';
+import Dashboard from 'pages/Dashboard';
+import DashboardLayout from 'layout/DashboardLayout';
+import { routes } from 'routes';
 
 // import { getAuthToken } from 'utils/token';
 
@@ -32,14 +35,18 @@ const App: React.FC = () => {
           <Route path="forgotPassword" element={<ForgotPassword />} />
           <Route path="createPin" element={<CreatePin />} />
           <Route path="createNewPassword" element={<CreateNewPassword />} />
+          <Route index element={<Home />} />
+
           <Route
-            index
+            path="main"
             element={
               // <ProtectedRoute isAllowed={!!token}>
-              <Home />
+              <DashboardLayout />
               // </ProtectedRoute>
             }
-          />
+          >
+            {routes}
+          </Route>
 
           <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>

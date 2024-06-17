@@ -1,11 +1,10 @@
 import React from 'react';
-import Sections from './components/Sections';
 import { ads } from 'assets';
 
 const Component: React.FC = () => {
   return (
-    <Sections backgroundColor="#473ad10f" height="100%">
-      <div className="flex justify-around lg:w-4/5 overflow-auto">
+    <div className="flex justify-center w-full bg-gray-100 py-5 overflow-auto">
+      <div className="flex w-[70%] justify-around">
         {Object.values(ads).map((logo, index) => (
           <img
             key={index}
@@ -16,7 +15,7 @@ const Component: React.FC = () => {
           />
         ))}
       </div>
-    </Sections>
+    </div>
   );
 };
 

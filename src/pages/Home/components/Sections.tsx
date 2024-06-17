@@ -16,7 +16,6 @@ const Component: React.FC<ISections> = ({
   style,
   classNames,
 }) => {
-  console.log(backgroundColor);
   return (
     <Radium.StyleRoot>
       <div
@@ -24,7 +23,7 @@ const Component: React.FC<ISections> = ({
         style={style}
       >
         <div
-          className={`p-2 w-[1200px] h-[${height}] flex justify-center ${classNames}`}
+          className={`p-2 w-[1200px]  bg-[${backgroundColor}] *:h-[${height}] flex justify-center ${classNames}`}
         >
           {children}
         </div>
